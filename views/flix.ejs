@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
+    <h1>FindAFlick</h1>
     <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+    <% flix.forEach( el => { %>
+            <li class='flixItem' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.flix %></span>
                 <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    <h2><%= user.userName %> has <%= left %> movies & TV shows to watch.</h2>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+    <form action="/flix/createFlix" method='POST'>
+        <input type="text" placeholder="Enter Movie/Tv Show" name='flixItem'>
         <input type="submit">
     </form>
 
