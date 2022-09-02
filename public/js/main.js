@@ -2,7 +2,7 @@ const deleteBtn = document.querySelectorAll('.del')
 const flixItem = document.querySelectorAll("span.not");
 const flixWatched = document.querySelectorAll("span.completed");
 
-Array.from(deleteBtn).forEach((el)=>{
+Array.from(deleteBtn).forEach((el) => {
     el.addEventListener('click', deleteFlix)
 })
 
@@ -14,9 +14,9 @@ Array.from(flixWatched).forEach((el) => {
     el.addEventListener("click", markIncomplete);
 });
 
-async function deleteFlix(){
+async function deleteFlix() {
     const flixId = this.parentNode.dataset.id;
-    try{
+    try {
         const response = await fetch("flix/deleteFlix", {
             method: "delete",
             headers: { "Content-type": "application/json" },
@@ -27,14 +27,14 @@ async function deleteFlix(){
         const data = await response.json()
         console.log(data)
         location.reload()
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-async function markComplete(){
+async function markComplete() {
     const flixId = this.parentNode.dataset.id;
-    try{
+    try {
         const response = await fetch("flix/markComplete", {
             method: "put",
             headers: { "Content-type": "application/json" },
@@ -45,14 +45,14 @@ async function markComplete(){
         const data = await response.json()
         console.log(data)
         location.reload()
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-async function markIncomplete(){
+async function markIncomplete() {
     const flixId = this.parentNode.dataset.id;
-    try{
+    try {
         const response = await fetch("flix/markIncomplete", {
             method: "put",
             headers: { "Content-type": "application/json" },
@@ -63,7 +63,22 @@ async function markIncomplete(){
         const data = await response.json()
         console.log(data)
         location.reload()
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
+
+
+async function getMovie(givenTitle) {
+    try {
+        const response = await fetch(`search/?title=${givenTitle}`, {
+            method: "get"
+        });
+        const data = await response.json()
+        console.log(data)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+
