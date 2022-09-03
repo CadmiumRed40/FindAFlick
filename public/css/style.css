@@ -10,12 +10,14 @@ h1{
 }
 
 /* Profile and Nav Bar Area */
+.nav-profile-section{
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+}
 .img-profile {
     vertical-align: middle;
     cursor: pointer;
-}
-.nav-section{
-    
 }
 .nav-wrapper {
     width: 70px;
@@ -26,19 +28,28 @@ h1{
     width: max-content;
     text-align: center;
     margin-left: 40px;
-    padding: 5px 10px;
     background-color:lightgray;
 }
 .nav-item {
     position: relative;
     line-height: 30px;
+    padding: 5px 10px;
 }
 .nav-item-border {
     border-bottom: 1px solid white;
 }
+.nav-item-border:after {
+    content: '';
+    display: inherit;
+    width: 30px;
+    margin: 0px auto;
+}
 .nav-link {
     text-decoration: none;
     color: white;
+}
+.nav-item:hover {
+    background-color:bisque;
 }
 .nav-hide {
  display: none;
