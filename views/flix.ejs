@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>FindAFlick</h1>
     <ul>
-    <% flix.forEach( el => { %>
+        <% flix.forEach( el=> { %>
             <li class='flixItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.flix %></span>
+                <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.flix %></span>
                 <span class='del'> Delete </span>
             </li>
-    <% }) %>    
+            <% }) %>
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> movies & TV shows to watch.</h2>
+    <h2>
+        <%= user.userName %> has <%= left %> movies & TV shows to watch.
+    </h2>
 
     <form action="/flix/createFlix" method='POST'>
         <input type="text" placeholder="Enter Movie/Tv Show" name='flixItem'>
@@ -26,7 +30,10 @@
     </form>
 
     <a href="/logout">Logout</a>
+    <h2 id="movieTitle"></h2>
+
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

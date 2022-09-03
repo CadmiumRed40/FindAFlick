@@ -71,14 +71,16 @@ async function markIncomplete() {
 
 async function getMovie(givenTitle) {
     try {
-        const response = await fetch(`search/?title=${givenTitle}`, {
-            method: "get"
-        });
-        const data = await response.json()
-        console.log(data)
+        const response = await fetch(`search/?title=${givenTitle}`);
+        const data = await response.json().then(x => x);
+        addMovieDataToDOM(data[0]);
+
     } catch (err) {
         console.log(err)
     }
 }
 
 
+async function addMovieDataToDOM(data) {
+    document.querySelector('#movieTitle').innerText = data.title
+}
