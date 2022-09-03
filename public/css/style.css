@@ -1,10 +1,76 @@
-h1{
-    color: red;
+:root {
+    --background-color: #5E6460;
+    --foreground-color: #404B4B;
+    --submit: #F0A513;
+    --signup: #9BDBCB;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+
+body, html { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-size: 18px;
 }
-.not{
-    text-decoration: underline;
+
+.container {
+    height: 100%;
+    margin: 0;
+    padding: 0 auto;
+}
+
+.hero-container {
+    min-width: 100%;
+    min-height: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../images/jake-hills-23LET4Hxj_U-unsplash.jpg');
+    background-size: cover;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    font-size: 4em;
+    width: 55%;
+    color: gainsboro;
+    margin: 0 auto;
+    padding-top: 25vh;
+    margin-bottom: 10vh;
+    text-align: center;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+#login-form {
+    margin: 15vh auto;
+    background-color: var(--foreground-color);
+    width: 50%;
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.7);
+}
+#login-form input{
+    padding: 1vh 1vw;
+    margin: 3vh auto;
+}
+#email {
+    margin-top: 35vh;
+}
+
+.form-logo{
+    margin: 5vh auto 0;
+    height: 30%;
+}
+
+.btn-primary {
+    background-color: var(--submit);
+    border-color: var(--submit);
+}
+
+.btn-secondary {
+    background-color: var(--signup);
+    background-color: var(--signup);
 }
