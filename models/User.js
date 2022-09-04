@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   password: String
 })
 
-const AboutMeSchema = new mongoose.Schema({
+const AboutSchema = new mongoose.Schema({
   firstName: { type: String, unique: false, required: true },
   lastName: { type: String, unique: false, required: true },
   dateOfBirth: { type: String, unique: false, required: false },
@@ -40,3 +40,4 @@ UserSchema.methods.comparePassword = function comparePassword(candidatePassword,
 
 
 module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('About', AboutSchema)
