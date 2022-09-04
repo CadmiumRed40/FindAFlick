@@ -38,12 +38,6 @@ h1{
 .nav-item-border {
     border-bottom: 1px solid white;
 }
-.nav-item-border:after {
-    content: '';
-    display: inherit;
-    width: 30px;
-    margin: 0px auto;
-}
 .nav-link {
     text-decoration: none;
     color: white;
