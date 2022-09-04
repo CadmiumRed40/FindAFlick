@@ -48,9 +48,6 @@ h1{
     text-decoration: none;
     color: white;
 }
-.nav-item:hover {
-    background-color:bisque;
-}
 .nav-hide {
  display: none;
 }
