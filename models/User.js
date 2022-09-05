@@ -4,14 +4,12 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
-  password: String
-})
-
-const AboutSchema = new mongoose.Schema({
-  firstName: { type: String, unique: false, required: true },
-  lastName: { type: String, unique: false, required: true },
-  dateOfBirth: { type: String, unique: false, required: false },
-  location: { type: String, unique: false, required: false }
+  password: String,
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  dateOfBirth: { type: String, required: false },
+  location: { type: String, required: false },
+  description: {type: String }
 })
 
 // Password hash middleware.
