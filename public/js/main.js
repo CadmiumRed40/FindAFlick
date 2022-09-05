@@ -68,8 +68,10 @@ async function markIncomplete() {
     }
 }
 
+document.getElementById("search-movie").addEventListener('click',getMovie)
 
-async function getMovie(givenTitle) {
+async function getMovie() {
+let givenTitle = document.getElementById('text-movie').value
     try {
         const response = await fetch(`search/?title=${givenTitle}`);
         const data = await response.json().then(x => x);
@@ -79,6 +81,7 @@ async function getMovie(givenTitle) {
         console.log(err)
     }
 }
+
 
 
 async function addMovieDataToDOM(data) {
