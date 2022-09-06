@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,48 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <%- include('components/menu'); %>
     <h1>FindAFlick</h1>
     <ul>
-    <% flix.forEach( el => { %>
+        <% flix.forEach( el=> { %>
             <li class='flixItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.flix %></span>
+                <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.flix %></span>
                 <span class='del'> Delete </span>
             </li>
-    <% }) %>    
+            <% }) %>
     </ul>
 
-    <h2><%= user.userName %> has <%= left %> movies & TV shows to watch.</h2>
-
-    <form action="/flix/createFlix" method='POST'>
-        <input type="text" placeholder="Enter Movie/Tv Show" name='flixItem'>
-        <input type="submit">
-    </form>
+    <input id='text-movie' type="text" placeholder="Enter Movie/Tv Show" name='flixItem'>
+    <button id='search-movie'>Search</button>
 
     <a href="/logout">Logout</a>
+    <section class="movieInfo displayNone">
+        <div class="container">
+            <div class="posterContainer">
+                <img id ="moviePoster" src="" alt="" class="poster">
+            </div>
+            <div>
+                <h2 id="movieTitle"></h2>
+                <p>Release date: <a id="movieYear"></a></p>
+                <p>Director(s): <a id="movieDirectors"></a></p>
+                <p>Writer(s): <a id="movieWriters"></a></p>
+                <p>Lead Actors: <a id="movieLeadActors"></a></p>
+                <p>IMDB Rating: <a id="movieIMDB"></a></p>
+                <p>Rotten Tomatoes Rating: <a id="movieTomatoes"></a></p>
+            </div>
+            <div class="synopsisContainer">
+                <h3>Synopsis</h3>
+                <p id="movieSynopsis"></p>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
