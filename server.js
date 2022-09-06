@@ -11,6 +11,7 @@ const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 const flixRoutes = require('./routes/flix')
 const searchRoutes = require('./routes/search')
+const favoritesRoutes = require('./routes/favorites')
 
 require('dotenv').config({ path: './config/.env' })
 
@@ -43,6 +44,7 @@ app.use(flash())
 app.use('/', mainRoutes)
 app.use("/flix", flixRoutes);
 app.use("/search", searchRoutes);
+app.use("/favorites", favoritesRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log('Server is running, you better catch it!')
