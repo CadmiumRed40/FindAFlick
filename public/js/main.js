@@ -83,6 +83,7 @@ async function getMovie() {
 }
 
 
+
 async function addMovieDataToDOM(data) {
     document.querySelector('.movieInfo').classList.remove('displayNone');
     document.querySelector('#moviePoster').src = data.poster
