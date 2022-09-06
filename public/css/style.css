@@ -1,25 +1,10 @@
-h1{
-    color: red;
-}
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    font-size: 1.5rem;
-}
-
-
-
 .displayNone {
     display: none !important;
 }
 
-
 .posterContainer img {
     max-width: 400px;
 }
-
 
 .container {
     display: flex;
