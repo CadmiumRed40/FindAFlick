@@ -65,7 +65,7 @@ const User = require('../models/User')
     if (req.body.password !== req.body.confirmPassword)
         validationErrors.push({ msg: "Passwords do not match" });  
     if (req.body.firstName !== req.body.firstName)
-      validationErrors.push({ msg: 'Please enter your Name.' }) 
+      validationErrors.push({ msg: 'Please enter your first Name.' }) 
     if (req.body.lastName !== req.body.lastName)
       validationErrors.push({ msg: 'Please enter your last Name.' }) 
     if (validationErrors.length) {

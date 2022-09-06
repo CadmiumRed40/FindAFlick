@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main class="signup-main" id="main-bg">
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="Enter Your User Name">
-        <input type="email" name="email" placeholder="Enter Your Email">
-        <input type="password" name="password" placeholder="Create Your Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
-        <input type="text" name="firstName" placeholder="First Name">
-        <input type="text" name="lastName" placeholder="Last Name">
-        <input type="date" name="date" placeholder="Date Of Birth">
-        <input type="text" name="location" placeholder="Location">
-        <input type="text" name="about" placeholder="Tell us about yourself...">
-        <input type="submit" name="finishSignUp" placeholder="Finish Sign Up">
-    </form>
+
+ <div class="flex-container"> 
+        <form action="/signup" method="POST" id="new-sign-up">
+            <h1 class="credentials-header">Credentials</h1>
+            <div class="flex-child">
+                <input type="text" name="userName" placeholder="Enter Your User Name">
+                <input type="email" name="email" placeholder="Enter Your Email">
+                <input type="password" name="password" placeholder="Create Your Password">
+                <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
+                <a href="/" class="back-btn">Back</a>
+            </div>
+            <h1 class="about-header">About Me</h1>
+            <div class="flex-child">  
+                <input type="text" name="firstName" placeholder="First Name">
+                <input type="text" name="lastName" placeholder="Last Name">
+                <input type="text" name="date" placeholder="Date Of Birth">
+                <input type="text" name="location" placeholder="Location">
+                <textarea rows="4" cols="40" name="comment" form="usrform">Tell us about yourself...</textarea>
+                <input type="submit" class="finish-btn" name="finishSignUp" placeholder="Finish Sign Up">
+            </div>  
+        </form>
+    </div>
+</div>  
+</main>
 </body>
 </html>

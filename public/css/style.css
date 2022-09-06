@@ -1,3 +1,23 @@
+/* default html */
+html{
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+*, *::before, *:after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+
+main{
+    margin: 5rem auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
 h1{
     color: red;
 }
@@ -45,3 +65,53 @@ h1{
 .nav-hide {
     display: none;
 }
+
+/* signup page */
+.signup-main #main-bg {
+    margin: 5rem;
+    width: 80%;
+    /* max-width: 700px; */
+    background-color: rgb(95,100,96);
+}
+.flex-container {
+    max-width: 700px;
+    background-color:rgb(66,75,75);
+}
+.flex-child {
+    padding: .5rem;
+    flex:1;
+}
+input, a {
+    margin: .5rem 1rem;
+    padding: .5rem 1rem;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+}
+.flex-child input {
+    flex-wrap: wrap;
+}
+
+.flex-child:first-child {
+    margin-right: 50px;
+}
+
+.back-btn { 
+    background-color: red;
+}
+
+.finish-btn {
+    background-color:rgb(71,148,102);
+    color: white;
+    border: 0;
+}
+.credentials-header, .about-header {
+    color: white;
+    text-align: center;
+}
+
+textarea {
+    margin: 10px 20px;
+    padding: 10px;
+    border: 0;
+}
+
