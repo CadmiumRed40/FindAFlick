@@ -29,6 +29,20 @@ h1{
     font-size: 1.5rem;
 }
 
+.displayNone {
+    display: none !important;
+}
+
+/* Flix search results */
+.posterContainer img {
+    max-width: 400px;
+}
+
+.container {
+    display: flex;
+    flex-basis: 400px;
+}
+
 /* Profile and Nav Bar Area */
 .nav-profile-section{
     position: absolute;
