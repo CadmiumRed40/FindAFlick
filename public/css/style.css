@@ -1,7 +1,12 @@
+.not{
+    font-size: 1.5rem;
+}
+
 .displayNone {
     display: none !important;
 }
 
+/* Flix search results */
 .posterContainer img {
     max-width: 400px;
 }
@@ -9,4 +14,41 @@
 .container {
     display: flex;
     flex-basis: 400px;
+}
+
+/* Profile and Nav Bar Area */
+.nav-profile-section{
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+}
+.img-profile {
+    vertical-align: middle;
+    cursor: pointer;
+}
+.nav-wrapper {
+    width: 70px;
+    z-index: 1;
+}
+.nav {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    margin-left: 40px;
+    background-color:lightgray;
+}
+.nav-item {
+    position: relative;
+    line-height: 30px;
+    padding: 5px 10px;
+}
+.nav-item-border {
+    border-bottom: 1px solid white;
+}
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+.nav-hide {
+    display: none;
 }
