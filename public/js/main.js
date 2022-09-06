@@ -68,8 +68,10 @@ async function markIncomplete() {
     }
 }
 
+document.getElementById('search-movie').addEventListener('click', getMovie)
 
-async function getMovie(givenTitle) {
+async function getMovie() {
+    let givenTitle = document.getElementById('text-movie').value;
     try {
         const response = await fetch(`search/?title=${givenTitle}`);
         const data = await response.json().then(x => x);
@@ -82,5 +84,18 @@ async function getMovie(givenTitle) {
 
 
 async function addMovieDataToDOM(data) {
+    document.querySelector('.movieInfo').classList.remove('displayNone');
+    document.querySelector('#moviePoster').src = data.poster
     document.querySelector('#movieTitle').innerText = data.title
+    document.querySelector('#movieYear').innerText = data.year
+    document.querySelector('#movieDirectors').innerText = data.directors.join(', ')
+    document.querySelector('#movieWriters').innerText = data.writers.join(', ')
+    document.querySelector('#movieLeadActors').innerText = data.cast.join(', ')
+    document.querySelector('#movieIMDB').innerText = data.imdb.rating
+    document.querySelector('#movieTomatoes').innerText = data.tomatoes.viewer.rating
+    document.querySelector('#movieSynopsis').innerText = data.fullplot
+
+
+
+
 }

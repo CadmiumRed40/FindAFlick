@@ -8,3 +8,20 @@ h1{
 .not{
     font-size: 1.5rem;
 }
+
+
+
+.displayNone {
+    display: none !important;
+}
+
+
+.posterContainer img {
+    max-width: 400px;
+}
+
+
+.container {
+    display: flex;
+    flex-basis: 400px;
+}
