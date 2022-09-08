@@ -19,20 +19,29 @@
         <form action="/signup" method="POST" id="new-sign-up">
             <h1 class="credentials-header">Credentials</h1>
             <div class="flex-child">
+                <label for="text" class="hidden">Enter Your User Name</label>
                 <input type="text" name="userName" placeholder="Enter Your User Name">
+                <label for="email" class="hidden">Enter Your Email</label>
                 <input type="email" name="email" placeholder="Enter Your Email">
+                <label for="password" class="hidden">Enter Your Password</label>
                 <input type="password" name="password" placeholder="Create Your Password">
+                <label for="password" class="hidden">Enter Your Password</label>
                 <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
                 <a href="/" class="back-btn">Back</a>
             </div>
             <h1 class="about-header">About Me</h1>
-            <div class="flex-child">  
+            <div class="flex-child"> 
+                <label for="text" class="hidden">First Name</label> 
                 <input type="text" name="firstName" placeholder="First Name">
+                <label for="text" class="hidden">Last Name</label>
                 <input type="text" name="lastName" placeholder="Last Name">
+                <label for="text" class="hidden">Date of Birth</label>
                 <input type="text" name="date" placeholder="Date Of Birth">
+                <label for="text" class="hidden">Location</label>
                 <input type="text" name="location" placeholder="Location">
+                <label for="textarea" class="hidden">Tell us about yourself</label>
                 <textarea rows="4" cols="40" name="comment" form="usrform">Tell us about yourself...</textarea>
-                <input type="submit" class="finish-btn" name="finishSignUp" placeholder="Finish Sign Up">
+                <input type="submit" class="finish-btn" name="finishSignUp" value="Finish Sign Up">
             </div>  
         </form>
     </div>
