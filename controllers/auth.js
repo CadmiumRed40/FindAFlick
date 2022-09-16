@@ -63,10 +63,10 @@ const User = require('../models/User')
             msg: "Password must be at least 8 characters long",});
     if (req.body.password !== req.body.confirmPassword)
         validationErrors.push({ msg: "Passwords do not match" });  
-    if (req.body.firstName !== req.body.firstName.minlength)
-      validationErrors.push({ msg: 'Please enter your first name.' }) 
-    if (req.body.lastName !== req.body.lastname.minglength)
-      validationErrors.push({ msg: 'Please enter your last name.' }) 
+    if (!validator.isLength(req.body.firstName, { min: 2 }))
+      validationErrors.push({ msg: 'First name must be at least 2 characters.' })
+    if (!validator.isLength(req.body.lastName, { min: 2 }))
+      validationErrors.push({ msg: 'Last name must be at least 2 characters.' }) 
     if (validationErrors.length) {
         req.flash("errors", validationErrors);
         return res.redirect("../signup");
