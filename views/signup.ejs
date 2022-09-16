@@ -5,19 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main class="signup-main" id="main-bg">
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
-    <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
-    </form>
-</body>
+    <% } %> 
+        <div class="signup-container"> 
+            <div class="form-container"> 
+                <div class="flex-child-one">
+                    <h2 class="credentials-header">Credentials</h2>
+                    <form action="/signup" method="POST" id="new-sign-up">
+                        <div class="form-left">
+                            <input type="text" name="userName" placeholder="Enter Your User Name">
+                            <input type="email" name="email" placeholder="Enter Your Email">
+                            <input type="password" name="password" placeholder="Create Your Password">
+                            <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
+                            <button href="/" class="back-btn">Back</button>
+                        </div>
+                    </form>   
+                </div>
+                <hr style=" height: 350px; margin-top: 35px;">
+                <div class="flex-child-two">
+                    <h2>About Me</h2> 
+                     <form action="/signup" method="POST" id="new-sign-up">
+                        <div class="form-right">
+                            <input type="text" class="first-name" name="firstName" placeholder="First Name">
+                            <input class="form-right-padding" type="text" name="lastName" placeholder="Last Name">
+                            <span> (Optional) </span>
+                            <hr style="width: 300px; margin: 0 0 0 60px;">
+                            <input type="text" name="date" placeholder="Date Of Birth">
+                            <input class="form-right-padding" type="text" name="location" placeholder="Location">
+                            <textarea rows="4" cols="40" name="comment" form="usrform">Tell us about yourself...</textarea>
+                            <button type="submit" name="finishSignUp" value="Finish Sign Up">Finish Sign Up</button>
+                        </div>
+                     </form>
+                </div>
+            </div>
+        </div>  
+    </main>
+</body> 
 </html>

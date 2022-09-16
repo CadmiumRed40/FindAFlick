@@ -1,3 +1,22 @@
+/* default html */
+/* html{
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.6;
+}
+main{
+    margin: 5rem auto;
+    width: 90%;
+    max-width: 1000px;
+} */
+
+h1{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
 .not{
     font-size: 1.5rem;
 }
@@ -51,4 +70,79 @@
 }
 .nav-hide {
     display: none;
+}
+
+/* signup page */
+body {
+    background-color: rgb(28,28,28)
+}
+.signup-container {
+    padding: 100px;
+    background-color: rgb(84,89,85)
+}
+.form-container {
+    border-radius: 20px;
+    display: flex;
+    width: 860px;
+    min-width: 500px;
+    background-color: rgb(57,66,66);
+}
+h2 {
+    color: white;
+}
+.flex-child-one {
+    max-width: 35%;
+    padding: 1rem 3rem 1rem 3rem;
+}
+input {
+    height: 2rem;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+.form-left input {
+    width: 96%;
+}
+.form-left button {
+    text-decoration: none;
+    background-color: rgb(205,60,63);
+    padding: 9px 18px 9px 18px;
+    color: white;
+    border: 0px;
+    text-align: center;
+    display: block;
+    margin: .65rem 0 1rem 0;
+}
+.flex-child-two {
+    width: 70%;
+    padding: 1rem 3rem 1rem 3rem;
+}
+.form-right input {
+    width: 44%;
+}
+span {
+    display: block;
+    color: white;
+    font-size: 13px;
+    margin-bottom: 6px;
+    height:0px;
+}
+input .first-name{
+   margin-bottom: 0;
+}
+.form-right-padding {
+    margin-left: 1rem !important;
+}
+textarea {
+    width: 95%;
+    height: 105px;
+    margin-top: 1rem;
+}
+.form-right button   {
+    background-color: rgb(45,142,86);
+    padding: 9px 18px 9px 18px;
+    border: 0;
+    color: white;
+    text-align: center;
+    display: block;
+    margin: 1.4rem 4% 1rem auto;
 }
