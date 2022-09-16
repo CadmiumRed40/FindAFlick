@@ -13,30 +13,39 @@
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
-    <% } %>
-
- <div class="flex-container"> 
-        <form action="/signup" method="POST" id="new-sign-up">
-            <h1 class="credentials-header">Credentials</h1>
-            <div class="flex-child">
-                <input type="text" name="userName" placeholder="Enter Your User Name">
-                <input type="email" name="email" placeholder="Enter Your Email">
-                <input type="password" name="password" placeholder="Create Your Password">
-                <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
-                <a href="/" class="back-btn">Back</a>
+    <% } %> 
+        <div class="signup-container"> 
+            <div class="form-container"> 
+                <div class="flex-child-one">
+                    <h2 class="credentials-header">Credentials</h2>
+                    <form action="/signup" method="POST" id="new-sign-up">
+                        <div class="form-left">
+                            <input type="text" name="userName" placeholder="Enter Your User Name">
+                            <input type="email" name="email" placeholder="Enter Your Email">
+                            <input type="password" name="password" placeholder="Create Your Password">
+                            <input type="password" name="confirmPassword" placeholder="Confirm Your Password">
+                            <button href="/" class="back-btn">Back</button>
+                        </div>
+                    </form>   
+                </div>
+                <hr style=" height: 350px; margin-top: 35px;">
+                <div class="flex-child-two">
+                    <h2>About Me</h2> 
+                     <form action="/signup" method="POST" id="new-sign-up">
+                        <div class="form-right">
+                            <input type="text" class="first-name" name="firstName" placeholder="First Name">
+                            <input class="form-right-padding" type="text" name="lastName" placeholder="Last Name">
+                            <span> (Optional) </span>
+                            <hr style="width: 300px; margin: 0 0 0 60px;">
+                            <input type="text" name="date" placeholder="Date Of Birth">
+                            <input class="form-right-padding" type="text" name="location" placeholder="Location">
+                            <textarea rows="4" cols="40" name="comment" form="usrform">Tell us about yourself...</textarea>
+                            <button type="submit" name="finishSignUp" value="Finish Sign Up">Finish Sign Up</button>
+                        </div>
+                     </form>
+                </div>
             </div>
-            <h1 class="about-header">About Me</h1>
-            <div class="flex-child">  
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name">
-                <input type="text" name="date" placeholder="Date Of Birth">
-                <input type="text" name="location" placeholder="Location">
-                <textarea rows="4" cols="40" name="comment" form="usrform">Tell us about yourself...</textarea>
-                <input type="submit" class="finish-btn" name="finishSignUp" value="Finish Sign Up">
-            </div>  
-        </form>
-    </div>
-</div>  
-</main>
-</body>
+        </div>  
+    </main>
+</body> 
 </html>
