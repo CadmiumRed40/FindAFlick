@@ -1,0 +1,1 @@
+const Favorites = require('..models/favorites')
